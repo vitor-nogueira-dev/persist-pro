@@ -1,6 +1,3 @@
-/**
- * Use this function to create a greeting string with the given name
- * @param name The name to greet
- */
-export declare const makeHello: (name?: string | undefined) => string;
+export { useLocalStorage } from './components/useLocalStorage';
+export { setLocalStorage, getLocalStorage, } from './storage';
 //# sourceMappingURL=index.d.ts.map
