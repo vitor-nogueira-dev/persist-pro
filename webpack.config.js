@@ -6,7 +6,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'), 
     filename: 'index.ts', 
-    library: 'LocalKit', 
+    library: 'PersistPro', 
     libraryTarget: 'umd', 
     globalObject: 'this', 
   },

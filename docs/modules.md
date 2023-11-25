@@ -1,16 +1,28 @@
-[local-kit](README.md) / Exports
+[persist-pro](README.md) / Exports
 
-# local-kit
+# persist-pro
 
 ## Table of contents
 
 ### Functions
 
+- [clearLocalStorage](modules.md#clearlocalstorage)
 - [getLocalStorage](modules.md#getlocalstorage)
+- [removeItemLocalStorage](modules.md#removeitemlocalstorage)
 - [setLocalStorage](modules.md#setlocalstorage)
 - [useLocalStorage](modules.md#uselocalstorage)
 
 ## Functions
+
+### clearLocalStorage
+
+▸ `Const` **clearLocalStorage**(): ``null`` \| { `error`: *boolean* = true; `message`: *string*  }
+
+**Returns:** ``null`` \| { `error`: *boolean* = true; `message`: *string*  }
+
+Defined in: storage.ts:40
+
+___
 
 ### getLocalStorage
 
@@ -28,9 +40,25 @@ Defined in: storage.ts:15
 
 ___
 
+### removeItemLocalStorage
+
+▸ `Const` **removeItemLocalStorage**(`key`: *string*): ``null`` \| { `error`: *boolean* = true; `message`: *string*  }
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | *string* |
+
+**Returns:** ``null`` \| { `error`: *boolean* = true; `message`: *string*  }
+
+Defined in: storage.ts:28
+
+___
+
 ### setLocalStorage
 
-▸ `Const` **setLocalStorage**(`key`: *string*, `value`: *any*): *void*
+▸ `Const` **setLocalStorage**(`key`: *string*, `value`: *any*): *undefined* \| { `error`: *boolean* = true; `message`: *string*  }
 
 #### Parameters
 
@@ -39,9 +67,9 @@ ___
 | `key` | *string* |
 | `value` | *any* |
 
-**Returns:** *void*
+**Returns:** *undefined* \| { `error`: *boolean* = true; `message`: *string*  }
 
-Defined in: storage.ts:3
+Defined in: storage.ts:2
 
 ___
 

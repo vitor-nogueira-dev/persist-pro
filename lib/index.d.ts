@@ -1,3 +1,3 @@
 export { useLocalStorage } from './components/useLocalStorage';
-export { setLocalStorage, getLocalStorage, } from './storage';
+export { setLocalStorage, getLocalStorage, removeItemLocalStorage, clearLocalStorage } from './storage';
 //# sourceMappingURL=index.d.ts.map
