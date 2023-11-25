@@ -1,27 +1,61 @@
-[__ADD NAME HERE__](README.md) / Exports
+[local-kit](README.md) / Exports
 
-# __ADD NAME HERE__
+# local-kit
 
 ## Table of contents
 
 ### Functions
 
-- [makeHello](modules.md#makehello)
+- [getLocalStorage](modules.md#getlocalstorage)
+- [setLocalStorage](modules.md#setlocalstorage)
+- [useLocalStorage](modules.md#uselocalstorage)
 
 ## Functions
 
-### makeHello
+### getLocalStorage
 
-▸ `Const` **makeHello**(`name?`: *string*): *string*
-
-Use this function to create a greeting string with the given name
+▸ `Const` **getLocalStorage**(`key`: *string*): *any*
 
 #### Parameters
 
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `name?` | *string* | The name to greet |
+| Name | Type |
+| :------ | :------ |
+| `key` | *string* |
 
-**Returns:** *string*
+**Returns:** *any*
 
-Defined in: [index.ts:5](https://github.com/Antman261/npm-package-template/blob/f2945d1/src/index.ts#L5)
+Defined in: storage.ts:15
+
+___
+
+### setLocalStorage
+
+▸ `Const` **setLocalStorage**(`key`: *string*, `value`: *any*): *void*
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | *string* |
+| `value` | *any* |
+
+**Returns:** *void*
+
+Defined in: storage.ts:3
+
+___
+
+### useLocalStorage
+
+▸ **useLocalStorage**(`key`: *string*, `initialValue`: *string*): *any*[]
+
+#### Parameters
+
+| Name | Type |
+| :------ | :------ |
+| `key` | *string* |
+| `initialValue` | *string* |
+
+**Returns:** *any*[]
+
+Defined in: components/useLocalStorage.ts:3
