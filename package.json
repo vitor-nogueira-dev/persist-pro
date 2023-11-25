@@ -1,10 +1,10 @@
 {
-  "name": "__ADD NAME HERE__",
-  "version": "0.1.0",
-  "description": "__ADD DESCRIPTION HERE__",
+  "name": "persist-pro",
+  "version": "0.1.3",
+  "description": "PersistPro: Uma biblioteca avançada para gerenciamento otimizado de localStorage. Facilita a persistência de dados no navegador, oferecendo uma interface simples e robusta para armazenamento e recuperação de dados, incluindo suporte a objetos e arrays. Ideal para projetos que necessitam de armazenamento local confiável e eficiente.",
   "repository": {
     "type": "git",
-    "url": "__ADD GIT REPO HERE__"
+    "url": "https://github.com/vitor-nogueira-dev/persist-pro"
   },
   "main": "lib/index",
   "types": "lib/index",
@@ -43,8 +43,13 @@
   "author": "__YOUR NAME__ <__YOUR EMAIL ADDRESS__> (__YOUR WEBSITE__)",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
+    "@babel/preset-typescript": "^7.23.3",
     "@types/chai": "^4.2.18",
     "@types/mocha": "^8.2.2",
+    "@types/react": "^18.2.38",
+    "babel-loader": "^9.1.3",
     "chai": "^4.3.4",
     "eslint": "^7.25.0",
     "lint-staged": "^10.5.4",
@@ -53,6 +58,12 @@
     "ts-node": "^9.1.1",
     "typedoc": "^0.20.36",
     "typedoc-plugin-markdown": "^3.8.1",
-    "typescript": "^4.2.4"
+    "typescript": "^4.2.4",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@babel/preset-react": "^7.23.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   }
 }
