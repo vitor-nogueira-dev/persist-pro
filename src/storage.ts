@@ -11,16 +11,24 @@ export const setLocalStorage = (key: string, value: any) => {
   }
 };
 
+function parseJSONOrReturnOriginal(value: any) {
+  try {
+    return JSON.parse(value);
+  } catch (e) {
+    return value;
+  }
+}
 
-export const getLocalStorage = (key: string): any => {
+export const getLocalStorage = (key: string) => {
   try {
     const item = localStorage.getItem(key);
-    return item ? JSON.parse(item) : item;
+    return item ? parseJSONOrReturnOriginal(item) : item;
   } catch (error) {
+    console.error('Error accessing localStorage:', error);
     return {
       error: true,
       message: `Error getting localStorage item: ${error}`,
-    }
+    };
   }
 };
 
@@ -48,5 +56,19 @@ export const clearLocalStorage = () => {
     }
   }
 }
+
+
+export const pushToStoredArray = (key: string, value: any) => {
+  try {
+    const currentArray = JSON.parse(localStorage.getItem(key) || '[]');
+    currentArray.push(value);
+    localStorage.setItem(key, JSON.stringify(currentArray));
+  } catch (error) {
+    return {
+      error: true,
+      message: `Error appending to localStorage array: ${error}`,
+    };
+  }
+};
 
 
