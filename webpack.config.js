@@ -1,14 +1,16 @@
 const path = require('path');
+// const webpack = require('webpack');
 
 module.exports = {
   mode: 'development',
   entry: './src/index.ts',
   output: {
-    path: path.resolve(__dirname, 'dist'), 
-    filename: 'index.ts', 
-    library: 'PersistPro', 
-    libraryTarget: 'umd', 
-    globalObject: 'this', 
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'index.js',
+    library: 'PersistPro',
+    libraryTarget: 'umd',
+    globalObject: 'this',
+    libraryExport: 'default',
   },
   module: {
     rules: [
@@ -26,11 +28,16 @@ module.exports = {
           },
         },
       },
-      // ... outros loaders, se necessário ...
     ],
   },
   resolve: {
-    extensions: ['.tsx', '.ts', '.js'], // Adicionar '.ts' e '.tsx' aqui
+    extensions: ['.tsx', '.ts', '.js'],
   },
-  // ...outras configurações...
+  // plugins: [
+  //   new webpack.BannerPlugin({
+  //     banner: '/* Minificação desativada para getLocalStorage */',
+  //     raw: true,
+  //     include: /getLocalStorage/,
+  //   }),
+  // ],
 };
