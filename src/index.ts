@@ -1,11 +1,21 @@
 
 export { useLocalStorage } from './components/useLocalStorage';
 
-export {
+import {
   setLocalStorage,
   getLocalStorage,
   removeItemLocalStorage,
-  clearLocalStorage
-}
-  from './storage';
+  clearLocalStorage,
+  pushToStoredArray,
+} from './storage';
 
+const PersistPro = {
+  setLocalStorage,
+  getLocalStorage,
+  removeItemLocalStorage,
+  clearLocalStorage,
+  pushToStoredArray,
+};
+
+
+export default PersistPro;
