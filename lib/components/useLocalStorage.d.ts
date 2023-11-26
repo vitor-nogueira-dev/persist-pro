@@ -1,2 +1,2 @@
-export declare function useLocalStorage(key: string, initialValue: string): any[];
+export declare function useLocalStorage(key: string, initialValue: any): any[];
 //# sourceMappingURL=useLocalStorage.d.ts.map

@@ -11,4 +11,8 @@ export declare const clearLocalStorage: () => {
     error: boolean;
     message: string;
 } | null;
+export declare const pushToStoredArray: (key: string, value: any) => {
+    error: boolean;
+    message: string;
+} | undefined;
 //# sourceMappingURL=storage.d.ts.map
