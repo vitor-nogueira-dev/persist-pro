@@ -1,16 +1,16 @@
-# Contributing
+## ℹ️ Contribuição
 
-## Getting started
+Para cotribuir com o projeto, siga os passos abaixo:
 
-1. Fork the repo and checkout your fork
-2. Create a branch for your change 
-1. `nvm use` to pick up node version from `.nvmrc`
-3. `npm i --ci` to install all required packages 
-1. `npm run watch` - tests should now run and pass.
+1. Fork este repositório [Persist Pro](https://github.com/vitor-nogueira-dev/persist-pro-demo)
+2. Crie um branch com a sua feature: `git checkout -b your-name-feature`;
+3. Commit suas mudanças: `git commit -m 'feat: My new feature'`;
+4. Push para o seu branch: `git push origin your-name-feature`.
+5. Crie um novo Pull Request `[Your Name] - [Feature Name]`.
+   - Se tiver alguma issue relacionada, adicione o número da issue no título do Pull Request.
+   - Se tiver alguma descrição adicional, adicione no corpo do Pull Request.
+6. Depois que o merge da sua pull request for feito, você pode deletar o seu branch.
+7. Depois que o merge da sua pull request for feito, você pode atualizar a sua versão local do repositório remoto com o comando `git pull`.
+8. Depois que o merge da sua pull request for feito, você pode deletar o seu branch local com o comando `git branch -D nome-do-branch`.
 
-## Testing
-
-Tests are located in `./test` and can be run in watch mode via `npm run watch`.
-
-All changes code must have accompanying tests. If you are adding a new feature to the library, add an integration test that uses the library as a user might use it in their own tests. Be sure to include unit tests for the individual components too.
-
+Obrigado por contribuir! 🚀
