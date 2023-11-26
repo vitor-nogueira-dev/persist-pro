@@ -1,6 +1,6 @@
 {
   "name": "persist-pro",
-  "version": "0.1.6",
+  "version": "0.1.36",
   "description": "PersistPro: Uma biblioteca avançada para gerenciamento otimizado de localStorage. Facilita a persistência de dados no navegador, oferecendo uma interface simples e robusta para armazenamento e recuperação de dados, incluindo suporte a objetos e arrays. Ideal para projetos que necessitam de armazenamento local confiável e eficiente.",
   "repository": {
     "type": "git",
@@ -12,7 +12,9 @@
     "lib",
     "LICENSE",
     "README.md",
-    "package.json"
+    "package.json",
+    "dist/index.js",
+    "lib"
   ],
   "keywords": [
     "localStorage",
@@ -49,7 +51,7 @@
     ],
     "require": "ts-node/register"
   },
-  "author": "__YOUR NAME__ <__YOUR EMAIL ADDRESS__> (__YOUR WEBSITE__)",
+  "author": "Vitor NOgueira",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.23.3",
