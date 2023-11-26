@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useLocalStorage(key: string, initialValue: string) {
+export function useLocalStorage(key: string, initialValue: any) {
   const [storedValue, setStoredValue] = useState(() => {
     if (typeof window === 'undefined') {
       return initialValue;
@@ -29,10 +29,11 @@ export function useLocalStorage(key: string, initialValue: string) {
     }
   };
 
-  const removeValue = (key: string) => {
+  const removeValue = () => {
     if (typeof window !== 'undefined') {
       try {
         window.localStorage.removeItem(key);
+        setStoredValue(initialValue); // opcional: resetar o valor armazenado no estado
       } catch (error) {
         return {
           error: true,
@@ -42,5 +43,38 @@ export function useLocalStorage(key: string, initialValue: string) {
     }
   };
 
-  return [storedValue, setValue, removeValue];
+  const removeFromStoredArrayById = (idToRemove: any) => {
+    if (typeof window !== 'undefined') {
+      try {
+        const currentArray = JSON.parse(window.localStorage.getItem(key) || '[]');
+        const updatedArray = currentArray.filter((item: any) => +item.id !== +idToRemove);
+
+        window.localStorage.setItem(key, JSON.stringify(updatedArray));
+        setStoredValue(updatedArray);
+      } catch (error) {
+        return {
+          error: true,
+          message: `Error removing item by ID from localStorage array: ${error}`,
+        }
+      }
+    }
+  };
+
+  const pushToStoredArray = (item: any) => {
+    if (typeof window !== 'undefined') {
+      try {
+        const currentArray = JSON.parse(window.localStorage.getItem(key) || '[]');
+        const updatedArray = [...currentArray, item];
+        window.localStorage.setItem(key, JSON.stringify(updatedArray));
+        setStoredValue(updatedArray);
+      } catch (error) {
+        return {
+          error: true,
+          message: `Error adding item to localStorage array: ${error}`,
+        }
+      }
+    }
+  };
+
+  return [storedValue, setValue, pushToStoredArray, removeValue, removeFromStoredArrayById];
 }
